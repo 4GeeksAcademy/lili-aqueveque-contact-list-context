@@ -81,10 +81,11 @@ export const AgendaHome = () => {
 												</div>
 
 												<div className="d-flex">
-													<button type="button"></button>
+													<button type="button" className="btn btn-secondary w-50" data-bs-dismiss="modal" onClick={() => location.reload(true)}>No</button>
+													<button onClick={() => actions.editUser(item, key)} className="btn btn-primary w-50">Save</button>
 												</div>
-
 											</form>
+											
 										</div>
 									</div>
 								</div>

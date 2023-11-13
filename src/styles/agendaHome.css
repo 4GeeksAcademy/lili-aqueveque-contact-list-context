@@ -74,3 +74,6 @@ body{
 .getBackAnchor{
     color: #3f24b6;
 }
+.editModal {
+    width: 450px;
+}

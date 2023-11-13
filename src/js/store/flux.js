@@ -12,16 +12,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 			inputs: {
 				nameInput: "",
 				emailInput: "",
-				agenda_slug: "",
+				agenda_slug: "liliscontacts",
 				addressInput: "",
 				phoneInput: ""
 			}
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
+
 			//hago un GET request para luego llenar mi array que lleva el nombre de agenda
 			getAgenda: async () => {
 				try {
@@ -102,14 +99,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			//declaro mi funcion para borrar un usuario en particular
-			deleteUser: async (i) => {
+			deleteUser: async (id) => {
 				try {
-					let id = i
 					await fetch(`${apiUrl}/${id}`, { method: "DELETE", })
 					location.reload()
 
 				} catch (e) {
-					console.log("Delete User Function ERROR===", e)
+					console.log("Delete User Fucntion ERROR===", e)
 				}
 			},
 
